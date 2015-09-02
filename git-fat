@@ -592,29 +592,29 @@ class GitFat(object):
 
 
 if __name__ == '__main__':
-    fat = GitFat()
-    cmd = sys.argv[1] if len(sys.argv) > 1 else ''
-    if cmd == 'filter-clean':
-        fat.cmd_filter_clean()
-    elif cmd == 'filter-smudge':
-        fat.cmd_filter_smudge()
-    elif cmd == 'init':
-        fat.cmd_init()
-    elif cmd == 'status':
-        fat.cmd_status(sys.argv[2:])
-    elif cmd == 'push':
-        fat.cmd_push(sys.argv[2:])
-    elif cmd == 'pull':
-        fat.cmd_pull(sys.argv[2:])
-    elif cmd == 'gc':
-        fat.cmd_gc()
-    elif cmd == 'verify':
-        fat.cmd_verify()
-    elif cmd == 'checkout':
-        fat.cmd_checkout(sys.argv[2:])
-    elif cmd == 'find':
-        fat.cmd_find(sys.argv[2:])
-    elif cmd == 'index-filter':
-        fat.cmd_index_filter(sys.argv[2:])
-    else:
-        print('Usage: git fat [init|status|push|pull|gc|verify|checkout|find|index-filter]', file=sys.stderr)
+	fat = GitFat()
+	cmd = sys.argv[1] if len(sys.argv) > 1 else ''
+	if cmd == 'filter-clean':
+		fat.cmd_filter_clean()
+	elif cmd == 'filter-smudge':
+		fat.cmd_filter_smudge()
+	elif cmd == 'init':
+		fat.cmd_init()
+	elif cmd == 'status':
+		fat.cmd_status(sys.argv[2:])
+	elif cmd == 'push':
+		fat.cmd_push(sys.argv[2:])
+	elif cmd == 'pull':
+		fat.cmd_pull(sys.argv[2:])
+	elif cmd == 'gc':
+		fat.cmd_gc()
+	elif cmd == 'verify':
+		fat.cmd_verify()
+	elif cmd == 'checkout':
+		fat.cmd_checkout(sys.argv[2:])
+	elif cmd == 'find':
+		fat.cmd_find(sys.argv[2:])
+	elif cmd == 'index-filter':
+		fat.cmd_index_filter(sys.argv[2:])
+	else:
+		print('Usage: git fat [init|status|push|pull|gc|verify|checkout|find|index-filter]', file=sys.stderr)
